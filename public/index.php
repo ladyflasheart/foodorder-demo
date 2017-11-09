@@ -2,16 +2,23 @@
 /**
  * Main Page for Basic Food Ordering Demo App
  */
+//basic autoloading example
+function my_clunky_autoloader($class)
+{
+    $folders = [
+        __DIR__ . '/../src/Class/',
+        __DIR__ . '/../src/Contract/',
+    ];
 
-require_once(__DIR__ . '/../src/Class/Order.php');
-require_once(__DIR__ . '/../src/Contract/Edible.php');
-require_once(__DIR__ . '/../src/Contract/HasPrice.php');
-require_once(__DIR__ . '/../src/Contract/HasName.php');
-require_once(__DIR__ . '/../src/Class/Burger.php');
-require_once(__DIR__ . '/../src/Class/Cola.php');
-require_once(__DIR__ . '/../src/Class/Pizza.php');
-require_once(__DIR__ . '/../src/Class/Salad.php');
-require_once(__DIR__ . '/../src/Class/Sprite.php');
+    foreach ($folders as $pathPrefix) {
+        $file = $pathPrefix . $class . '.php';
+        if (file_exists($file)) {
+            include_once($file);
+        }
+    }
+}
+
+spl_autoload_register('my_clunky_autoloader');
 
 if (!isset($_POST['order'])) {
     require_once(__DIR__ . '/../templates/form.php');
