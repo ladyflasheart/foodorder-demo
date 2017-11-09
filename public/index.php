@@ -20,10 +20,15 @@ function my_clunky_autoloader($class)
 
 spl_autoload_register('my_clunky_autoloader');
 
+//Composer autoloading
+require_once(__DIR__ . '/../vendor/autoload.php');
+
+//make the $log logger available in script
+require_once(__DIR__ . '/../src/loggersetup.php');
+
 if (!isset($_POST['order'])) {
     require_once(__DIR__ . '/../templates/form.php');
 } else {
-
     $order = new Order;
 
     $fields = ['maincourse', 'drink'];
@@ -36,6 +41,7 @@ if (!isset($_POST['order'])) {
 
     //check maincourses and drinks strings are valid
     if (!empty($itemNames) && !$order->validateOrderItems($itemNames)) {
+        $logger->warn('Invalid item detected in the request for ' . implode(', ', $itemNames));
         $errorMessage = 'Sorry your order included an invalid item. Please try again.';
         require_once(__DIR__ . '/../templates/form.php');
         die();
