@@ -1,5 +1,10 @@
 <?php
 
+namespace Foodorder\Entity;
+
+use Foodorder\Contract\HasName;
+use Foodorder\Contract\HasPrice;
+
 /**
  * An Order of Food/Drink
  */

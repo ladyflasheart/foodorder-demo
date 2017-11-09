@@ -1,5 +1,11 @@
 {
     "require": {
         "monolog/monolog": "^1.23"
+    },
+    "autoload": {
+      "psr-4": {"Foodorder\\Entity\\": "src/Entity/",
+                "Foodorder\\Contract\\": "src/Contract/",
+                "Foodorder\\Factory\\": "src/Factory/"
+      }
     }
 }

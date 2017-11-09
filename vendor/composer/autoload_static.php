@@ -15,6 +15,12 @@ class ComposerStaticInit43bf873d0aee2f2416515877aa557f96
         array (
             'Monolog\\' => 8,
         ),
+        'F' => 
+        array (
+            'Foodorder\\Factory\\' => 18,
+            'Foodorder\\Entity\\' => 17,
+            'Foodorder\\Contract\\' => 19,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -25,6 +31,18 @@ class ComposerStaticInit43bf873d0aee2f2416515877aa557f96
         'Monolog\\' => 
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
+        ),
+        'Foodorder\\Factory\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Factory',
+        ),
+        'Foodorder\\Entity\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Entity',
+        ),
+        'Foodorder\\Contract\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Contract',
         ),
     );
 

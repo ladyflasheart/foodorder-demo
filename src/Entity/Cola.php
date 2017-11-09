@@ -1,27 +1,30 @@
 <?php
 
+namespace Foodorder\Entity;
+
+use Foodorder\Contract\Edible;
+use Foodorder\Contract\HasPrice;
+use Foodorder\Contract\HasName;
+
 /**
- * Burger
+ * Cola
  */
-class Burger implements Edible, HasPrice, HasName
+class Cola implements Edible, HasPrice, HasName
 {
-    private $name = 'burger';
+    private $name = 'cola';
 
     private $type = 'main course';
 
-    private $price = 150;
+    private $price = 100;
 
     private $ingredients = [
-        'minced beef',
-        'egg yolk',
-        'olive oil',
-        'mustard',
-        'coriander',
-        'bread roll',
-        'cheese slice',
+        'water',
+        'sugar',
+        'caramel',
+        'flavourings',
     ];
 
-    private $description = 'Succulent beef burger topped with a slice of cheese in a white bread roll';
+    private $description = 'Classic caramel flavoured fizzy pop';
 
     /**
      * @return string

@@ -1,5 +1,7 @@
 <?php
 
+namespace Foodorder\Contract;
+
 /**
  * Interface that comestibles conform to
  */

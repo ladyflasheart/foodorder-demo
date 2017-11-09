@@ -1,5 +1,11 @@
 <?php
 
+namespace Foodorder\Entity;
+
+use Foodorder\Contract\Edible;
+use Foodorder\Contract\HasPrice;
+use Foodorder\Contract\HasName;
+
 /**
  * Sprite
  */
