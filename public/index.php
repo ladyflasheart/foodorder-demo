@@ -3,6 +3,16 @@
  * Main Page for Basic Food Ordering Demo App
  */
 
+require_once(__DIR__ . '/../src/Class/Order.php');
+require_once(__DIR__ . '/../src/Contract/Edible.php');
+require_once(__DIR__ . '/../src/Contract/HasPrice.php');
+require_once(__DIR__ . '/../src/Contract/HasName.php');
+require_once(__DIR__ . '/../src/Class/Burger.php');
+require_once(__DIR__ . '/../src/Class/Cola.php');
+require_once(__DIR__ . '/../src/Class/Pizza.php');
+require_once(__DIR__ . '/../src/Class/Salad.php');
+require_once(__DIR__ . '/../src/Class/Sprite.php');
+
 if (!isset($_POST['order'])) {
     require_once(__DIR__ . '/../templates/form.php');
 } else {
