@@ -13,7 +13,7 @@ require_once(__DIR__ . '/header.php');
             </li>
             <li> You have ordered : <?php echo $OrderList ?>
             </li>
-            <li> The total cost is  &pound; : <?php echo $OrderCost ?>
+            <li> The total cost is : &pound;  <?php echo $OrderCost ?>
             </li>
             <li>
                 <input type="hidden" name="order" value="order">
